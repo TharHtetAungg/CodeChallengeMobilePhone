@@ -80,12 +80,35 @@ public class OldPhoneKeypad
 
         return result;
     }
+    
+    static void TestCase(string input, string expected)
+    {
+        string result = OldPhonePad(input);
+        bool passed = result.Equals(expected);
+
+        Console.WriteLine($"Test '{input}': {(passed ? "PASSED" : "FAILED")}");
+        if (!passed)
+        {
+            Console.WriteLine($"  Expected: '{expected}'");
+            Console.WriteLine($"  Actual:   '{result}'");
+        }
+    }
+    
     //Test
     public static void Main()
     {
         string input = Console.ReadLine();
         Console.WriteLine(OldPhonePad(input)); // Console input type
        //Console.WriteLine(OldPhonePad("227*#")); // Output: B
+        Console.WriteLine("Running tests...");
+        TestCase("", "");  // Empty input.
+        TestCase("222", "");
+        TestCase("227#", "BP");  // Simple case
+        TestCase("4433555 555666#", "HELLO");  // Word
+        TestCase("227*#", "B");  // Backspace
+        TestCase("8 88777444666*664#", "TURING");  // Complex case
+        Console.WriteLine("Tests complete!");
+
 
     }
 }
