@@ -4,7 +4,7 @@ Using an old mobile phone keypad to convert a string of numeric inputs into read
 
 ## Function
 - The program processes a string of key presses and it is converted into their corresponding letters. 
-- Each keys can be press multiple times but the input string must be end with # to be processed. If input string didn't consist of #, it will return only input numbers. 
+- Each keys can be press multiple times but the input string must be end with # to be processed. If input string didn't consist of #, it will return nothing.
 - Space key acts as a separator between character sequences. 
 - The * key acts as backspace. 
 
