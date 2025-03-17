@@ -1,4 +1,4 @@
-# OldPhoneKeypad 
+# OldPhoneKeypad
 
 Using an old mobile phone keypad to convert a string of numeric inputs into readable text.
 
@@ -23,3 +23,6 @@ Using an old mobile phone keypad to convert a string of numeric inputs into read
 ## Example of Inputs & Outputs:
 - Input: 33#  -- > E
 - Input: 4433555 555666# -- > HELLO
+
+
+![image](https://github.com/user-attachments/assets/0a32d2e2-dacf-4e69-9470-b9c5a98b61cc)
