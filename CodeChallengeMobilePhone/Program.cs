@@ -24,7 +24,7 @@ public class OldPhoneKeypad
         {'8', "TUV"},
         {'9', "WXYZ"},
         {'0', "0"},
-        {'*', "\b"}  // BackSpace
+       
     };
 
         string result = "";
@@ -48,6 +48,21 @@ public class OldPhoneKeypad
                 consecutiveCount = 0;
                 continue;
             }
+
+        if (currentChar == '*')
+        {
+
+            if (lastKey != '\0' && keyMapping.ContainsKey(lastKey))
+            {        
+                string letters = keyMapping[lastKey];
+                int letterIndex = (consecutiveCount - 1) % letters.Length;
+                result = result + (letters[letterIndex]);
+            }
+                result = result.Substring(0, result.Length - 1);
+                lastKey = '\0'; 
+                consecutiveCount = 0;
+                continue;
+        }
 
             // If it's a new key, process the previous one
             if (currentChar != lastKey && lastKey != '\0')
