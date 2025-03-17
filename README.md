@@ -21,5 +21,5 @@ Using an old mobile phone keypad to convert a string of numeric inputs into read
 6. Returning the Final String.
 
 ## Example of Inputs & Outputs:
-Input: 33#  -- > E
-Input: 4433555 555666# -- > HELLO
+- Input: 33#  -- > E
+- Input: 4433555 555666# -- > HELLO
