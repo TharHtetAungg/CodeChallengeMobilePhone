@@ -108,7 +108,5 @@ public class OldPhoneKeypad
         TestCase("227*#", "B");  // Backspace
         TestCase("8 88777444666*664#", "TURING");  // Complex case
         Console.WriteLine("Tests complete!");
-
-
     }
 }
